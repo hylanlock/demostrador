@@ -1,0 +1,12 @@
+# ⛔ La licencia de demo NO se sube nunca (es una licencia válida de Hylanlock).
+licencias/
+*.license.key
+
+# Datos de las demos (se regeneran con «Desde cero»).
+datos/
+
+# Hylanlock se clona aparte (instalar-movil.sh), no se versiona aquí.
+/hylanlock/
+
+__pycache__/
+*.pyc
