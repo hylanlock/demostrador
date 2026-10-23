@@ -1,6 +1,6 @@
 """Demostrador: menú en el navegador del móvil para lanzar demos REALES de los productos.
 
-    python3 demostrador.py            # y abre http://127.0.0.1:8080 en el navegador del móvil
+    python3 demostrador.py            # y abre http://127.0.0.1:8088 en el navegador del móvil
 
 El menú solo escucha en 127.0.0.1: quien se conecte a tu punto de acceso ve Hylanlock (puerto 8000),
 pero nunca este panel de control. Solo librería estándar.
@@ -15,7 +15,7 @@ from urllib.parse import parse_qs, urlparse
 
 import motor
 
-PUERTO_MENU = int(os.environ.get("DEMO_MENU_PORT", "8080"))
+PUERTO_MENU = int(os.environ.get("DEMO_MENU_PORT", "8088"))
 M = motor.Motor()
 ESTADO = {"error": "", "ok": ""}
 _lock = threading.Lock()

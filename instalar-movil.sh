@@ -28,4 +28,4 @@ fi
 
 echo
 echo "Listo. Arranca con:   python3 demostrador.py"
-echo "y abre en el navegador del móvil:   http://127.0.0.1:8080"
+echo "y abre en el navegador del móvil:   http://127.0.0.1:8088"

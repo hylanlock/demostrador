@@ -8,7 +8,7 @@ sale de su red.
 
 ```
  [móvil: Ubuntu en Termux]
-   demostrador.py  ── menú en http://127.0.0.1:8080  (solo lo ve el móvil)
+   demostrador.py  ── menú en http://127.0.0.1:8088  (solo lo ve el móvil)
         │ arranca / para / reinicia
         ▼
    Hylanlock real  ── http://<IP del punto de acceso>:8000  (lo abre el portátil del cliente)
@@ -52,13 +52,15 @@ y copia el texto del `.txt` al móvil como `licencias/hylanlock.license.key`.
 python3 demostrador.py
 ```
 
-Abre **http://127.0.0.1:8080** en el navegador del móvil →
+Abre **http://127.0.0.1:8088** en el navegador del móvil →
 1. **Desde cero** en la demo que vayas a enseñar (déjala limpia antes de cada visita).
 2. Activa el **punto de acceso** del móvil y que el cliente se conecte.
 3. El menú te dice la dirección que debe abrir (`http://192.168.x.x:8000`), los usuarios y el guion.
 
 - **Empezar** reanuda la demo como la dejaste; **Desde cero** la vuelve a montar.
 - Solo hay una demo encendida a la vez (el móvil no es un servidor de verdad).
+- Puertos: menú **8088** (`DEMO_MENU_PORT`) y Hylanlock **8000** (`DEMO_PORT`). El menú no usa el 8080 porque ahí
+  está la app de voz de Orión.
 - Actualizar Hylanlock en el móvil: `bash instalar-movil.sh` (hace `git pull`).
 
 ## Añadir un escenario
