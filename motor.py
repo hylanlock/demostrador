@@ -140,7 +140,8 @@ class Motor:
         env.update({"HYLANLOCK_DATA_DIR": carpeta, "HYLANLOCK_PORT": str(self.puerto),
                     "HYLANLOCK_BIND": "0.0.0.0", "HYLANLOCK_LAN_CIDR": LAN,
                     "HYLANLOCK_ORG_NAME": esc["organizacion"], "PYTHONIOENCODING": "utf-8",
-                    "HYLANLOCK_TG_TOKEN": "", "HYLANLOCK_TG_CHAT": ""})
+                    "HYLANLOCK_TG_TOKEN": "", "HYLANLOCK_TG_CHAT": "",
+                    "HYLANLOCK_OPEN_BROWSER": "0"})      # el menú ya da el enlace; no abrir pestañas solas
         env.update({f"HYLANLOCK_{k}": str(v) for k, v in esc.get("entorno", {}).items()})
         env.update(self.extra_env)
         orden = [sys.executable, self.runner] if self.runner else [sys.executable, "hylanlock.py"]
